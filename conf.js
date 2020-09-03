@@ -1,11 +1,20 @@
+const SpecReporter = require('jasmine-spec-reporter').SpecReporter;
+
 exports.config = {
 
     directConnect: true,
-    specs: ["tests/login.js"],
+    specs: ["tests/loginTests.js"],
     
-    jasmineNodeOpts: {
-      showColors: true,
-    }
+    onPrepare: function(){
+        jasmine.getEnv().clearReporters();
+        jasmine.getEnv().addReporter(new SpecReporter({
+            displayFailuresSummary: true,
+            displayFailuredSpec: true,
+            displaySuiteNumber: true,
+            displaySpecDuration: true
+               
+        }));
+      }
   
 };
   

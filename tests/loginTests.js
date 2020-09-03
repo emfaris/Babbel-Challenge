@@ -1,9 +1,7 @@
 const HomePageActions = require("../page_actions/homepage_action")
 const LoginPageActions = require("../page_actions/loginpage_action")
 const LoginPageObj = require("../page_objects/loginpage_obj")
-const AccountPageObj = require("../page_objects/accountpage_obj");
-const { browser } = require("protractor");
-
+const AccountPageObj = require("../page_objects/accountpage_obj")
 
 describe('Login Tests', () => {
     
