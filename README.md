@@ -18,9 +18,9 @@ It is not the fastest but still a pretty fast framework.
 Another reason being, how easy it is to setup and get the tests running in no time. 
 It comes default with Jasmine framework which has its own set of assertions, it works well and easy to understand and read the code. 
 
-## Page Object Model
-So we have here a whole directory which just consists of page objects related to specific pages, which is done in order to keep it simple and easy to understand. 
-These objects are utilized in the 'Actions' directory which consists of (as the name implies) actions related to specific pages also in the tests as well.
+## Pattern: Page Object Model
+So we have here a whole directory which just consists of page objects related to specific pages (Page Factory), which is done in order to keep it simple and easy to understand. 
+These objects are utilized in the 'Actions' directory which consists of (as the name implies) actions related to specific pages and also in the tests as well.
 
 So we have a bunch of actions which we can easily re-use if needed. 
 Coming towards to the TEST: It’s a good practice to have just 'expectations' in your tests. 
