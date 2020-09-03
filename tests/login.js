@@ -1,15 +1,20 @@
-const { browser } = require("protractor")
+const HomePageActions = require("../page_actions/homepage_action");
+const { browser } = require("protractor");
 
 describe('Login Tests', () => {
     
+    const homePageActions = new HomePageActions();
+
     beforeAll(function(){
         browser.ignoreSynchronization = true;
         browser.driver.manage().window().maximize();
-        browser.driver.get("https://zero.webappsecurity.com/");
+        browser.driver.get("http://zero.webappsecurity.com/");
+    
     });
 
     it("Should navigate to login page", function(){
-       //TO DO
+       homePageActions.goToSignInPage();
+       
     })
     
     it("Should deny login with invalid credentials", function(){
