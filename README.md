@@ -7,16 +7,16 @@ Chrome browser is configured currently for running tests.
 
 ### Tech Stack
 
-*[Protractor](https://www.protractortest.org/) - A popular end-to-end or integration test framework for Angular and AngularJS applications. Built on top of WebDriverJS, can also be used for non-angular applications (because why not?). Not the fastest but still fast enough for most projects. 
-Very easy to setup as it has minimal configurations but can be exapanded for advance tasks. 
+* [Protractor](https://www.protractortest.org/) - A popular end-to-end or integration test framework for Angular and AngularJS applications. Built on top of WebDriverJS, can also be used for non-angular applications (because why not?). Not the fastest but still fast enough for most projects. 
+Very easy to setup as it has minimal configurations but can be expanded for advance tasks. 
 
-*[Jasmine](https://jasmine.github.io/) - Jasmine is a BDD framework for testing JavaScript code. Provides a clean, obvious syntax. It has its own set of assertions/expectations which are built with the function  `expect` whcih is chained with a Matcher function which takes the expected value. Mathcer function is responsible for reporting to Jasmine if the expectation is true or false. Jasmine will then pass or fail the spec (test). There is also an ability to write your own custom matchers if required. 
+* [Jasmine](https://jasmine.github.io/) - Jasmine is a BDD framework for testing JavaScript code. Provides a clean, obvious syntax. It has its own set of assertions/expectations which are built with the function  `expect` which is chained with a Matcher function which takes the expected value. Matcher function is responsible for reporting to Jasmine if the expectation is true or false. Jasmine will then pass or fail the spec (test). There is also an ability to write your own custom matchers if required. 
 
 ## Installation
 
 ### Setup Scripts
 
-* Clone the repository into a fodler
+* Clone the repository into a folder
 * Go inside the folder and run the following command from terminal/command prompt
 ```
 npm install 
@@ -39,7 +39,6 @@ Jasmine framework has been integrated with this project, supports BDD style test
 
 ```
 const HomePageActions = require("../page_actions/homepage_action")
-
 describe('Login Tests', () => {
     beforeAll(function(){
         browser.driver.get("http://zero.webappsecurity.com/");
@@ -56,18 +55,15 @@ describe('Login Tests', () => {
 
 ## Page Objects
 
-This framework is strictly writting using page-object design pattern.
+This framework is strictly writing using page-object design pattern.
 
 ```
 const LoginPage = function () {
-
-    //Login form 
     this.loginForm = element(by.id("login_form")); 
     this.username = element(by.xpath(".//input[@id ='user_login']"));
     this.password = element(by.xpath(".//input[@id = 'user_password']"));
     this.submitBtn = element(by.name("submit"));
   };
-
 module.exports = LoginPage;
 ```
 
@@ -75,13 +71,13 @@ We have here a whole directory `/page_objects` which just consists of page objec
 These objects are utilized in the `/page_actions` classes which consists of (as the name implies) actions related to specific pages and also in the tests as well.
 
 So we have actions which we can be easily re-use if needed. 
-Coming towards to the `/tests/loginTests.js`: It’s a good practice to have just 'expectations' in your tests.Everything else is encapsulated. 
+Coming towards to the `/tests/loginTests.js`: It’s a good practice to have just 'expectations' in your tests. Everything else is encapsulated. 
 Very easy to read and maintain.
 
 ## Reporting
 
 Jasmine spec reporter has been configured in this project for a better viewing (much better than the default protractor dot reports ;D) of results in the console. 
-Ofcourse there are more advance reporting tools for example, Allure Reports but for now I think it does the job. 
+Of course there are more advance reporting tools for example, Allure Reports but for now I think it does the job. 
 The test progress can be seen while the test is executing in the console window and after completion a summary will be displayed. 
 
 <img src="./images/reportcapture.png"/>
