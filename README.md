@@ -78,6 +78,4 @@ Very easy to read and maintain.
 
 Jasmine spec reporter has been configured in this project for a better viewing (much better than the default protractor dot reports ;D) of results in the console. 
 Of course there are more advance reporting tools for example, Allure Reports but for now I think it does the job. 
-The test progress can be seen while the test is executing in the console window and after completion a summary will be displayed. 
-
-<img src=".\images\reportcapture.png" alt="reportcapture.png"/>
+The test progress can be seen while the test is executing in the console window and after completion a summary will be displayed.
